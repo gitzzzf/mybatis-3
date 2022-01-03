@@ -48,6 +48,7 @@ class CallSettersOnNullsTest {
   @Test
   void shouldCallNullOnMappedProperty() {
     try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
+      // test
       Mapper mapper = sqlSession.getMapper(Mapper.class);
       User user = mapper.getUserMapped(1);
       Assertions.assertTrue(user.nullReceived);
